@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1641183077 source:/home/nick/crypto_projects/c.c
+	<immintrin.h>
+	<stdio.h>
+	"sha256.h"
+
+1641182819 /home/nick/crypto_projects/sha256.h
+	<stdint.h>
+	<string.h>
+	<immintrin.h>
+	<x86intrin.h>
+
+1641160106 source:/home/nick/crypto_projects/sha.c
+	<stdlib.h>
+	<memory.h>
+	"shatest.h"
+
+1641159563 /home/nick/crypto_projects/shatest.h
+	<stddef.h>
+
+1641159899 source:/home/nick/crypto_projects/shatest.c
+	<stdio.h>
+	<memory.h>
+	<string.h>
+	"shatest.h"
+

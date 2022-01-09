@@ -1,0 +1,28 @@
+preprocessing:
+    message + "1" bit + padding + length of message as binary at end = 512-bit block
+
+    01010101000110010110101... 1 000000000000000000000000000000000000... 000010101010101...
+            message           bit            padding                     msg size(u32)
+
+parsing: 
+    split 512-bit Messages into 16 32-bit words
+
+initial hash value (first 32-bits of fractional parts of square roots of first 8 primes):
+    H0 6a09e667
+    H1 bb67ae85
+    H2 3c6ef372
+    H3 a54ff53a
+    H4 510e527f
+    H5 9b05688c
+    H6 1f83d9ab
+    H7 5be0cd19
+
+schedule (64 words):
+    u32 a, b, c, d, e, f, g, h 
+
+    copy first 16 messages into schedule
+    then for i = 16 to 63:  
+        W[i] = e1(W[i-2]) + W[i-7] + e0(W[i-15]) + W[i-16]
+
+    //a, b, c, d, e, f, g, h = H0 ... H7
+

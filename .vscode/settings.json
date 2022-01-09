@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "sha256.h": "c",
+        "*.tcc": "c",
+        "varargs.h": "c",
+        "stdarg.h": "c",
+        "string.h": "c",
+        "stdio.h": "c"
+    }
+}
